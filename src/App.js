@@ -23,7 +23,7 @@ function App() {
     const checkAnswer = () => {
         if (guess.toLowerCase() === word.toLowerCase()) {
             setMessage("🎉 Correct! Well done!");
-            setScore(score + 10);
+            setScore(score + 1);
         } else {
             setMessage("❌ Wrong! Try again.");
         }
@@ -51,7 +51,7 @@ function App() {
     };
 
     return (
-        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Comic Neue, sans-serif", backgroundColor: "red", height: "100vh" }}>
+        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Comic Neue, sans-serif", backgroundColor: "green", height: "100vh" }}>
             <h1>🔠 Word Jumble Game</h1>
             <button onClick={() => changeLevel("easy")}>Easy</button>
             <button onClick={() => changeLevel("medium")}>Medium</button>
