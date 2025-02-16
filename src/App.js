@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "@fontsource/comic-neue"; // Fun font for kids
 
 const levels = {
-    easy: ["Game", "Nice", "Salt", "Sand", "Rice", "Award", "Clash", "Writer", "Pollen", "Flap"],
-    medium: ["Calendar", "Ordering", "Minutes", "Quarter", "Digital", "Record", "Analogue", "Sources", "Natural", "Circuit"],
-    hard: ["Investigation", "Components", "Clockwise", "Pictogram", "Diagram", "Temperature", "Experiment", "Survival", "Explorer", "Vertical"]
+    easy: ["Game", "cine", "Salt", "Sand", "Rice", "Award", "Clash", "Writer", "Pollen", "Flap", "Cheese", "Idol", "Brittle", "Annoy", "Village", "City", "Fair", "Grip", "Stalk", "Avenue", "Ate", "Knives", "Oxen", "Larvae", "Lost"],
+    medium: ["Calendar", "Gymnastics", "Ordering", "Units", "Analogue", "Quarter", "Digital", "Record", "Minutes", "Seconds", "Arguing", "Ragged", "Gleaming", "Wrong", "Threw", "Banged", "Yelled", "Pile", "Silly", "Grabbed", "Sources", "Natural", "Electricity", "Paraffin", "Circuit", "Investigation", "Appears", "Apparent", "Components", "Sockets", "Rescue", "Clinging", "Clockwise", "Tally", "Living", "Enquiry", "Grinned", "Dangled", "Pictogram", "Diagram", "Explore", "Classify", "Amazing", "Throb", "Carroll", "Data", "Dead", "Observe", "Terrified", "Whirr", "Pattern", "Survey", "Identify", "Object", "Panic", "Harness", "Random", "Collect", "Scientific", "Include", "Develop", "Moist", "Amphibian", "Embryo", "Mammal", "Abdomen", "Reproduce", "Producer", "Consumer", "Predator", "Danger", "Dangle"],
+    hard: ["Dizzy", "Formal", "Informal", "Paragraph", "Charity", "Greeting", "Purpose", "Audience", "Thousand", "Sticker", "Numeral", "Estimate", "Compare", "Notation", "Dollar", "Cent", "Compose", "Decompose", "Upright", "Transport", "Seedlings", "Wilt", "Properties", "Temperature", "Nutrients", "Organ", "Digests", "Identical", "Commutative", "Associative", "Subtract", "Seconds", "Minutes", "Hours", "Analogue", "Interval", "Timetable", "Suitable", "Funny", "Decay", "Experiment", "Rubbish", "Creatures", "Receive", "Different", "Catalogue", "Protect", "Pill", "Leisure", "Mystery", "Prowling", "Legends", "Fantasy", "Historical", "Adventure", "Folktales", "Fascinating", "Crouching", "Mixture", "Properties", "Combined", "Separate", "Practical", "Attracted", "Sieve", "Physical", "Observe", "Pretzels", "Comment", "Strategies", "Project", "Timeline", "Interval", "Fabulous", "Express", "Arrives", "Departure", "Shortest", "Survival", "Tonga", "Explorer", "Weighing", "Gravity", "Containers", "Equipment", "Calves", "Attract", "Vertical", "Force meter", "Experiment", "Friction", "Equator", "Nostrils", "Reflection", "Polygons", "Sketch", "Humpback", "Antarctica", "Pacific", "Plastic", "Soles", "Irregular", "Bubbles", "Sledges", "Horizontal", "Fabric", "Migration", "Blubber", "Enormous", "Complain", "Muttered", "Withered", "Eventually", "Kookaburra", "Wiggled", "Wobbled", "Punctuation", "Conditional", "Transparent", "Opaque", "Shadow", "Translucent", "Observation", "Aluminium", "Technology", "Handspan", "Conclusion", "Prediction", "Manipulative", "Increasing", "Decreasing", "Constant", "Designing", "Sequence", "Capacity", "Measure", "Kilometre", "Estimate", "Greeks", "Sheba", "Shone", "Width", "Poles", "Fossils", "Trojans", "Yemen", "Centimetres", "Area", "Interact", "Vehicles", "Armies", "Boastful", "Millilitres", "Chance", "Attract", "Trapped", "Terrible", "Clutched", "Weighing", "Results", "Magnetic", "Benefit", "Creatures", "Exhausted", "Perimeter", "Likely", "Repel", "Findings", "Crew", "Iceberg", "Voyage", "Properties", "Maiden", "Freezing", "Lounge", "Lifejacket", "Drilling", "Facts", "Hull", "Shipwreck", "Chandelier", "Destination", "Impression", "Multiplication", "Tilt", "Pilot", "Lookout", "Liquified", "Extinct", "Distributive", "Disaster", "Seabed", "Steamed", "Engine", "Explore", "Multiples", "Massive", "Survivors", "Plan", "Fix", "Toad", "Lawn"]
 };
 
 function shuffle(word) {
@@ -51,25 +51,17 @@ function App() {
     };
 
     return (
-        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Comic Neue, sans-serif", backgroundColor: "#f5f5dc", height: "100vh" }}>
-            <h1 style={{ fontSize: "40px", color: "#ff5733" }}>🔠 Word Jumble Game</h1>
-            <div>
-                <button onClick={() => changeLevel("easy")} style={{ margin: "5px", padding: "10px", fontSize: "18px" }}>Easy</button>
-                <button onClick={() => changeLevel("medium")} style={{ margin: "5px", padding: "10px", fontSize: "18px" }}>Medium</button>
-                <button onClick={() => changeLevel("hard")} style={{ margin: "5px", padding: "10px", fontSize: "18px" }}>Hard</button>
-            </div>
-            <h2 style={{ fontSize: "30px", color: "#009688", fontWeight: "bold" }}>Unscramble: <span style={{ color: "#ff9800", fontSize: "35px" }}>{scrambled}</span></h2>
-            <input
-                type="text"
-                value={guess}
-                onChange={(e) => setGuess(e.target.value)}
-                placeholder="Your guess"
-                style={{ fontSize: "20px", padding: "10px", borderRadius: "10px", border: "2px solid #ff9800" }}
-            />
-            <button onClick={checkAnswer} style={{ marginLeft: "10px", padding: "10px 15px", fontSize: "18px", borderRadius: "10px", border: "none", backgroundColor: "#ff5733", color: "white", cursor: "pointer" }}>Check</button>
-            <p style={{ fontSize: "25px", fontWeight: "bold", color: "#009688" }}>{message}</p>
-            <button onClick={newWord} style={{ padding: "10px 20px", fontSize: "18px", borderRadius: "10px", backgroundColor: "#4CAF50", color: "white", cursor: "pointer" }}>🔄 New Word</button>
-            <h3 style={{ fontSize: "25px", color: "#000" }}>Score: {score}</h3>
+        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Comic Neue, sans-serif", backgroundColor: "red", height: "100vh" }}>
+            <h1>🔠 Word Jumble Game</h1>
+            <button onClick={() => changeLevel("easy")}>Easy</button>
+            <button onClick={() => changeLevel("medium")}>Medium</button>
+            <button onClick={() => changeLevel("hard")}>Hard</button>
+            <h2>Unscramble: {scrambled}</h2>
+            <input type="text" value={guess} onChange={(e) => setGuess(e.target.value)} />
+            <button onClick={checkAnswer}>Check</button>
+            <p>{message}</p>
+            <button onClick={newWord}>🔄 New Word</button>
+            <h3>Score: {score}</h3>
         </div>
     );
 }
