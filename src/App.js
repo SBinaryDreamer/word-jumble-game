@@ -51,7 +51,7 @@ function App() {
     };
 
     return (
-        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Comic Neue, sans-serif", backgroundColor: "green", height: "100vh" }}>
+        <div style={{ textAlign: "center", padding: "20px", fontFamily: "Comic Neue, sans-serif", backgroundColor: "#4CAF50", height: "100vh" }}>
             <h1>🔠 Word Jumble Game</h1>
             <button onClick={() => changeLevel("easy")}>Easy</button>
             <button onClick={() => changeLevel("medium")}>Medium</button>
