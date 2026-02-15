@@ -283,6 +283,8 @@ function App() {
         setTimeout(() => setTimeLeft(t => t - 1), 1000);
     } else {
       setMessage("⏳ Time's up! Correct: " + currentWord);
+      setSelectedIndex(null);
+
     }
     return () => clearTimeout(timerRef.current);
   }, [timeLeft]);
@@ -354,6 +356,8 @@ function App() {
     setOptions(generateOptions(selected));
     setMessage("");
     setTimeLeft(15);
+    setSelectedIndex(null);
+
   };
 
   const accuracy =
